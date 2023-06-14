@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-size: 24px;
+			text-align: center;
+		}
+		button {
+			font-size: 24px;
+			padding: 10px 20px;
+			margin: 10px;
+			border-radius: 10px;
+			border: none;
+			background-color: #ddd;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #aaa;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Rolar Dado de 6 Lados</h1>
+	<button id="rollButton">Rolar</button>
+	<p id="result"></p>
+	<script>
+		document.getElementById("rollButton").addEventListener("click", function() {
+			var result = Math.floor(Math.random() * 6) + 1;
+			document.getElementById("result").innerHTML = "O resultado foi: " + result;
+		});
+	</script>
+</body>
+</html>
